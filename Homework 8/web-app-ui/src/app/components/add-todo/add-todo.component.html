@@ -1,0 +1,22 @@
+<form [formGroup]="toDoForm" (ngSubmit)="addToDo()"
+      class="d-flex justify-content-center align-items-center m-auto w-50 flex-column"
+      style="height: 50vh;">
+
+  <div class="form-floating mb-3 w-50 mb-3">
+    <p>Title</p>
+    <input type="text" class="form-control" formControlName="title">
+  </div>
+
+  <div class="form-floating w-50 mb-3">
+    <p>Description</p>
+    <input type="text" class="form-control" formControlName="description">
+  </div>
+
+  <div class="form-check w-50 mb-3">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" formControlName="completed">
+    <p>Is it completed?</p>
+  </div>
+
+  <button type="submit" class="btn btn-success mb-2">Add ToDo</button>
+  <a routerLink="/" class="btn btn-primary">Back to all ToDos</a>
+</form>
